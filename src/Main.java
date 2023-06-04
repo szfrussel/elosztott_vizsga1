@@ -33,5 +33,6 @@ public class Main {
 
         harcosSzal.start();
         varazsloSzal.start();
+
     }
 }
