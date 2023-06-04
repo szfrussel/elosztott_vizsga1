@@ -31,6 +31,7 @@ public abstract class Karakter implements Runnable {
         if (pozicioX.get() == ellenfel.pozicioX.get() && pozicioY.get() == ellenfel.pozicioY.get()) {
             int sebzes = (int) (Math.random() * 4);
             eletero.addAndGet(-sebzes);
+            if (eletero.get() < 0) {eletero.set(0);}
             System.out.println(nev + " harcol " + ellenfel.nev + "-val, sebzés: " + sebzes);
             System.out.println((nev + " életerő: " + eletero + " " + ellenfel.nev + " életerő: " + ellenfel.eletero));
         }

@@ -8,7 +8,8 @@ public class Harcos extends Karakter {
         while (eletero.get() > 0) {
             mozgas();
             try {
-                Thread.sleep(1000);
+                int varakozasiIdo = Math.round((float)Math.random() * 100);
+                Thread.sleep(varakozasiIdo);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

@@ -8,12 +8,13 @@ public class Main {
                 harcos.mozgas();
                 harcos.harcol(varazslo);
                 try {
-                    int varakozasiIdo = Math.round((float)Math.random() * 1000);
+                    int varakozasiIdo = Math.round((float)Math.random() * 100);
                     Thread.sleep(varakozasiIdo);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
+            if(harcos.eletero.get() <= 0 ) {System.out.println("Harcos Meghalt!"); }
         });
 
         Thread varazsloSzal = new Thread(() -> {
@@ -21,12 +22,13 @@ public class Main {
                 varazslo.mozgas();
                 varazslo.harcol(harcos);
                 try {
-                    int varakozasiIdo = Math.round((float)Math.random() * 1000);
+                    int varakozasiIdo = Math.round((float)Math.random() * 100);
                     Thread.sleep(varakozasiIdo);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
+            if(varazslo.eletero.get() <= 0 ) {System.out.println("Varazslo Meghalt!"); }
         });
 
         harcosSzal.start();
